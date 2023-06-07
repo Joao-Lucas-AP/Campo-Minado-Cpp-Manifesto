@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
 #include <time.h>
 #include <filesystem>
 
@@ -25,84 +26,19 @@ int main()
 	Texture t;
 	t.loadFromFile("D:/CampoMinadoCPP/Campo minado C++/Campo minado C++/Images/tiles.jpg");
 	Sprite s(t);
-
+	Font font;
+	font.loadFromFile("D:/CampoMinadoCPP/Campo minado C++/Campo minado C++/Images/PressStart2P-Regular.ttf");
+	
+	//Elementos do menu
 	GameState gameState = GameState::MainMenu;
 
-	RectangleShape playButton(Vector2f(100, 100));
+	RectangleShape playButton(Vector2f(200, 80));
 	playButton.setFillColor(Color(100, 100, 100));
-	playButton.setPosition(150, 150);
+	playButton.setPosition(app.getSize().x / 2 - playButton.getSize().x / 2, app.getSize().y / 2 - playButton.getSize().y / 2);
 
-	for (int i = 1; i <= 10; i++) 
-	{
-		for (int j = 1; j <= 10; j++) 
-		{
-			sgrid[i][j] = 10;
-
-			if (rand() % 5 == 0)
-			{
-				grid[i][j] = 9;
-			}
-			else
-			{
-				grid[i][j] = 0;
-			}
-		}
-	}
-
-	for (int i = 1; i <= 10; i++)
-	{
-		for (int j = 1; j <= 10; j++)
-		{
-			int n = 0;
-
-			if (grid[i][j] == 9)
-			{
-				continue;
-			}
-
-			if (grid[i + 1][j] == 9)
-			{
-				n++;
-			}
-
-			if (grid[i][j + 1])
-			{
-				n++;
-			}
-
-			if (grid[i - 1][j])
-			{
-				n++;
-			}
-
-			if (grid[i][j - 1])
-			{
-				n++;
-			}
-
-			if (grid[i + 1][j + 1])
-			{
-				n++;
-			}
-
-			if (grid[i - 1][j - 1])
-			{
-				n++;
-			}
-
-			if (grid[i - 1][j + 1])
-			{
-				n++;
-			}
-
-			if (grid[i + 1][j - 1])
-			{
-				n++;
-			}
-
-			grid[i][j] = n;
-		}
-	}
+	Text playButtonText("Play", font, 32);
+	playButtonText.setPosition(playButton.getPosition().x + playButton.getSize().x / 2 - playButtonText.getLocalBounds().width / 2,
+	playButton.getPosition().y + playButton.getSize().y / 2 - playButtonText.getLocalBounds().height / 2);
 
 	while (app.isOpen())
 	{
@@ -300,16 +236,16 @@ int main()
 		}
 		if (gameState == GameState::MainMenu)
 		{
-			// Draw the main menu
-			RectangleShape menuBackground(Vector2f(400, 400));
-			menuBackground.setFillColor(Color(220, 220, 220));
+			RectangleShape backgroundRect(Vector2f(app.getSize().x, app.getSize().y));
+			backgroundRect.setFillColor(Color::Black);
+			app.draw(backgroundRect);
 
-			RectangleShape playButton(Vector2f(100, 100));
-			playButton.setFillColor(Color(100, 100, 100));
-			playButton.setPosition(150, 150);
+			Text titleText("Minesweeper", font, 32);
+			titleText.setPosition(app.getSize().x / 2 - titleText.getLocalBounds().width / 2, 100);
+			app.draw(titleText);
 
-			app.draw(menuBackground);
 			app.draw(playButton);
+			app.draw(playButtonText);
 		}
 		else if (gameState == GameState::Playing)
 		{
