@@ -421,7 +421,7 @@ int main()
 		}
 		else if (gameState == GameState::GameOver)
 		{
-			//Desenho do game over
+			//Desenho do game over caso o jogador vença
 			if (playerWon)
 			{
 				RectangleShape gObackgroundRect(Vector2f(app.getSize().x, app.getSize().y));
@@ -444,6 +444,7 @@ int main()
 				app.draw(playAgainButton);
 				app.draw(playAgainButtonText);
 			}
+			//Desenho do game over caso o jogador perca
 			else 
 			{
 				RectangleShape gObackgroundRect(Vector2f(app.getSize().x, app.getSize().y));
