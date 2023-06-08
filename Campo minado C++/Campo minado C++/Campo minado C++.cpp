@@ -17,7 +17,8 @@ int main()
 {
 	srand(time(0));
 
-	RenderWindow app(VideoMode(400, 400), "Start the minesweeper");
+	//Criar janela do game
+	RenderWindow app(VideoMode(400, 400), "Minesweeper");
 
 	int w = 32;
 	int grid[12][12];
@@ -25,13 +26,13 @@ int main()
 
 	//Carregar textura
 	Texture t;
-	t.loadFromFile("D:/CampoMinadoCPP/Campo minado C++/Campo minado C++/Images/tiles.jpg");
+	t.loadFromFile("Images/tiles.jpg");
 	
 	Sprite s(t);
 	
 	//Carregar fonte
 	Font font;
-	font.loadFromFile("D:/CampoMinadoCPP/Campo minado C++/Campo minado C++/Images/PressStart2P-Regular.ttf");
+	font.loadFromFile("Images/PressStart2P-Regular.ttf");
 	
 	bool playerWon = false;
 
