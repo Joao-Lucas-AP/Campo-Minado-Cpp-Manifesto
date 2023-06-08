@@ -1,6 +1,6 @@
 ﻿  Campo minado C++.cpp
 d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(18): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
-d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(79): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
+d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(80): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
           with
           [
               T=int
@@ -9,7 +9,7 @@ d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(79): wa
           [
               T=float
           ]
-d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(265): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
+d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(266): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
           with
           [
               T=int
@@ -18,8 +18,8 @@ d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(265): w
           [
               T=float
           ]
-d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(391): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(398): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
+d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(392): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(399): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
           with
           [
               T=unsigned int
@@ -28,8 +28,8 @@ d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(398): w
           [
               T=float
           ]
-d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(417): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(427): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
+d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(418): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(428): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
           with
           [
               T=unsigned int
@@ -38,7 +38,7 @@ d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(427): w
           [
               T=float
           ]
-d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(450): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
+d:\campominadocpp\campo minado c++\campo minado c++\campo minado c++.cpp(451): warning C4244: 'argumento': conversão de 'T' para 'T', possível perda de dados
           with
           [
               T=unsigned int
